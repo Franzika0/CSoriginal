@@ -1,0 +1,12 @@
+#device{
+    width: 99%;
+    height: 98%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px solid #000000;
+    font-size: 200px;
+}
