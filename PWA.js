@@ -2,9 +2,14 @@ function init(){
 
     $.noConflict;
     jQuery(document).ready(($)=>{
-        $('#').click(()=>{
-            XD
+        $('#t').click(()=>{
+            $('#t').animate({
+                width : "+=100px",
+                height : "+=100px"
+            },1000)
         });
+
+ 
     });
 
 }

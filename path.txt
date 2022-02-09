@@ -1,0 +1,9 @@
+cd C:/GitHub/PW
+
+git status
+
+git add
+
+git commit -m''
+
+git push origin
