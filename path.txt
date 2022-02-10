@@ -11,3 +11,7 @@ git push origin
 git rm
 
 git commit -m''
+
+git pull origin
+
+git mv

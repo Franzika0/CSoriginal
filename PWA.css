@@ -2,29 +2,96 @@ html{
     font-size: 10vw;
 }
 
-
-#device{
-    width: 99%;
-    height: 98%;
+div[mid]{
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    border: 2px solid #000000;
-    font-size: 1.2rem;
 }
 
-#t{
-    width: 100px;
-    height:100px;
+
+
+
+
+#device{
+    transform-style: preserve-3d;
+    width: 99%;
+    height: 98%;
+    border: 2px solid #000000;
+}
+
+#FightPlace{
+    border: 2px solid #000000;
+    border-radius: 0.1rem;
+}
+
+#Road_Outer{
+    width: 74%;
+    height: 88%;
+    border: 2px solid #000000;
+    background-color: #c318ee;
+}
+
+#Road_Inner{
+    width: 66%;
+    height: 83%;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+}
+
+
+
+
+
+div[smallcastle]{
+    width: 20%;
+    height: 10%;
+    position: absolute;
+    transform-origin: center;
+    border: 2px solid #000000;
+    background-color: #eef110;
+}
+
+#Left_Player_SmallCastle{
+    left:-13.5%;
+    bottom:10%;
+}
+
+#Right_Player_SmallCastle{
+    right:-13.5%;
+    bottom:10%;
+}
+
+#Left_Enemy_SmallCastle{
+    left:-13.5%;
+    top:10%;
+}
+
+#Right_Enemy_SmallCastle{
+    right:-13.5%;
+    top:10%;
+}
+
+
+div[maincastle]{
+    width: 24%;
+    height: 12%;
     position: absolute;
     margin: auto;
+    transform-origin: center;
+    border: 2px solid #000000;
+    background-color: #f8b0b0;
+}
+
+#Enemy_MainCastle{
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
-    border: 2px solid #000000;
-    font-size: 0.5rem;
+    top:-6%;
+}
+#Player_MainCastle{
+    left: 0;
+    right: 0;
+    bottom:-6%;
 }
