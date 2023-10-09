@@ -1,0 +1,252 @@
+$shadow-in:12px 12px 16px 0px #272A2E inset, -10px -10px 14px 0px #828282 inset;
+$shadow-out:5px 5px 10px 0px #272A2E, -1.5px -1.5px 3px 0px #828282;
+$shadow-hover:5px 5px 10px 0px #272A2E, -1.5px -1.5px 3px 0px #ffcd8c;
+$shadow-submit:6px 6px 8px 0px #272A2E inset, -6px -6px 8px 0px #828282 inset;
+$shadow-in-input-pink:6px 6px 8px 0px #272A2E inset, -6px -6px 8px 0px #fde8f5 inset;
+$radius-btn:0.4rem;
+$bgc:#595A5C;
+$logo-color: #ff9137;
+//$coffee-logo:'../sourse/coffeeswap.png';
+
+.contentPanel_frame{
+    width: 102%;
+    height: 72%;
+    margin-top: 2.5%;
+    position: relative;
+    border-bottom: 0.2rem solid $logo-color;
+    box-shadow: 0px -5px 4px -3px inset $logo-color;
+    //box-shadow: 0 -0.5rem 0.7rem 0.1rem inset #ff9137;
+    border-radius: 0.7rem;
+    .adjust{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y:scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .contentPanel_plusButton{
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        right: 3.2%;
+        top: -12%;
+        padding: 0.5rem;
+        background-color: $bgc;
+        font-size: 1rem;
+        border-radius: $radius-btn;
+        box-shadow: $shadow-out;
+        cursor: pointer;
+        opacity: 1;
+        z-index: 10;
+        &:hover{
+            box-shadow: $shadow-hover;
+        }
+    }
+}
+
+.item{
+    width: 23%;
+    height: 30%;
+    position: relative;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    border-radius: $radius-btn;
+    box-shadow: $shadow-out;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.6s;
+    .courseName_frame{
+        width: 50%;
+        height: 50%;
+        position: relative;
+        padding-top: 1%;
+        padding-left: 2%;
+        border-radius: $radius-btn;
+        box-shadow: $shadow-out;
+        font-size: 1.5rem;
+        overflow-y: scroll;
+        z-index: 3;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .rank{
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        right: 3%;
+        bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0.4rem 0.4rem 0.4rem #272A2E;
+        font-size: 5.5rem;
+        font-weight: 200;
+        z-index: 1;
+    }
+    .subject{
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        font-size: 0.9rem;
+        font-weight: 200;
+        z-index: 1;
+    }
+    .icon{
+        position: absolute;
+        left: -10%;
+        bottom: -15%;
+        transform: rotateZ(-10deg);
+        width: 66%;
+        opacity: 0.1;
+        z-index: 4;
+    }
+    &:hover{
+        .icon{
+            opacity: 0.7;
+            z-index: 2;
+        }
+    }
+}
+
+.comment{
+    width: 23%;
+    height: 30%;
+    position: relative;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    padding: 1%;
+    font-size: 1.5rem;
+    border-radius: $radius-btn;
+    box-shadow: $shadow-out;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.2s;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    &:hover{
+        box-shadow: $shadow-hover;
+    }
+}
+
+.plusComment{
+    width: 102%;
+    height: 72%;
+    background-color: $bgc;
+    position: absolute;
+    top: 0;
+    left: 2000px;
+    border-bottom: 0.2rem solid $logo-color;
+    box-shadow: 0px -5px 4px -3px inset $logo-color;
+    border-radius: 0.7rem;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+    .frame{
+        width: 70%;
+        height: 40%;
+        //border: 1px solid #fff;
+        .title{
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0.3rem 0.3rem 0.4rem #000;
+            letter-spacing: 0.2rem;
+        }
+        .plusForm{
+            font-size: 1.2rem;
+            .input_frame{
+                width: 86%;
+                height: 8%;
+                display: flex;
+                justify-content: space-between;
+                div{
+                    margin-top: 0.5rem;
+                    width: 50%;
+                    height: 8%;
+                    //border: 1px solid #fff;
+                }
+                div input[type="text"]{
+                    border: none;
+                    outline: none;
+                    border-radius: $radius-btn;
+                    width:50%;
+                    height: 8%;
+                    padding: 0.5rem;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    background-color: #fccdcd;
+                    box-shadow: $shadow-in-input-pink;
+                }
+            }
+            .inputComment{
+                width: 86%;
+                height: 5rem;
+                resize: none;
+                border-radius: $radius-btn;
+                padding: 0.6rem;
+                font-size: 1rem;
+                font-weight: 600;
+                background-color: #fccdcd;
+                box-shadow: $shadow-in-input-pink;
+            }
+            .btn_frame{
+                width: 86%;
+                height: 8%;
+                margin-top: 0.5rem;
+                display: flex;
+                justify-content: space-between;
+                .submit{
+                    border: 1px solid #fff;
+                    border-radius: $radius-btn;
+                    width: 48.5%;
+                    height: 100%;
+                    padding: 0.3rem;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    background-color: $bgc;
+                    color: #fff;
+                    box-shadow: $shadow-out;
+                    cursor: pointer;
+                    &:hover{
+                        border: 3px solid #fccdcd;
+                    }
+                    &:active{
+                        border: none;
+                        box-shadow: $shadow-submit;
+                    }
+                }
+                .buttom{
+                    border: 1px solid #fff;
+                    border-radius: $radius-btn;
+                    width: 48.5%;
+                    height: 100%;
+                    padding: 0.3rem;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    background-color: $bgc;
+                    color: #fff;
+                    box-shadow: $shadow-out;
+                    text-align: center;
+                    cursor: pointer;
+                    &:hover{
+                        border: 3px solid #fccdcd;
+                    }
+                    &:active{
+                        border: none;
+                        box-shadow: $shadow-submit;
+                    }
+                }
+            }
+        }
+    }
+}
+

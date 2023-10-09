@@ -1,0 +1,87 @@
+$shadow-in:12px 12px 16px 0px #272A2E inset, -7px -7px 9px 0px #828282 inset;
+$shadow-hover:5px 5px 10px 0px #272A2E, -1.5px -1.5px 3px 0px #ffcd8c;
+$shadow-out:5px 5px 10px 0px #272A2E, -1.5px -1.5px 3px 0px #828282;
+$shadow-logo:$shadow-in,$shadow-out;
+$radius-btn:0.4rem;
+$bgc:#595A5C;
+
+.leftPanel_frame{
+    width: 20vw;
+    height: 48vw;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    left:1rem;
+    right: 0;
+    top: 1rem;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.7rem;
+    box-shadow: $shadow-in;
+    overflow-y:scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.leftPanel_frame_btn{
+    width: 75%;
+    height: 8%;
+    position: relative;
+    margin-top: 1rem;
+    border-radius: $radius-btn;
+    box-shadow: $shadow-out;
+    text-align: center;
+    line-height: 178%;
+    font-size: 1.7rem;
+    cursor: pointer;
+    &:hover{
+        box-shadow: $shadow-hover;
+    }
+    transition: all 0.5s;
+}
+
+.leftPanel_frame_logo{
+    width: 75%;
+    height: 30%;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: $radius-btn;
+    box-shadow: $shadow-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 152, 35);
+    
+    .frame{
+        width: 90%;
+        height: 90%;
+        position: relative;   
+        border-radius: $radius-btn;
+        box-shadow: $shadow-in;
+        font-size: 4rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bgc;
+        transition: all 0.2s;
+        &:active{
+            box-shadow: $shadow-in;
+        }
+        .three_d{
+            /*text-shadow: 7px 7px 25px rgba(198, 206, 237, .7),
+            -7px -7px 35px rgba(255, 255, 255, .7),
+            inset 0px 0px 4px rgba(255, 255, 255, .9),
+            inset 7px 7px 15px rgba(198, 206, 237, .8);*/
+            color:rgb(221, 221, 221);
+            text-shadow:
+            7px 7px 5px rgba(33, 34, 36, 0.7),
+            /*-2px -2px 6px rgba(255, 255, 255, 1),*/
+            /*7px 7px 35px rgba(198, 206, 237, .7),
+            -7px -7px 35px rgba(255, 255, 255, .7); */
+        }
+    }
+}
